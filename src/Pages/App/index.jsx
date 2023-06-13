@@ -9,6 +9,7 @@ import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import SignIn from '../SignIn'
 import Navbar from '../../Components/NavBar'
+import CheckoutSideMenu from '../../Components/CheckoutSideMenu'
 
 const AppRoutes = () => {
   let  routes = useRoutes([
@@ -29,8 +30,9 @@ const App = () => {
   return (
     <ShoppingCartProvider>
     <BrowserRouter>
-      <AppRoutes />
       <Navbar />
+      <AppRoutes />
+      <CheckoutSideMenu />
     </BrowserRouter>
     </ShoppingCartProvider>
   )

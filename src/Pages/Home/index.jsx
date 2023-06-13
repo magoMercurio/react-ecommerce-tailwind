@@ -4,6 +4,7 @@ import Card from "../../Components/Card"
 import ProductDetail from "../../Components/ProductDetail"
 
 
+
 function Home() {
 
   const [items, setItems] = useState(null);
@@ -26,6 +27,7 @@ function Home() {
         }
         </div>
         <ProductDetail />
+
       </Layout>
     </>
   )
