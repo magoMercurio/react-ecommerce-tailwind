@@ -43,6 +43,10 @@ export const ShoppingCartProvider = ({children}) => {
             .then(data => setItems(data))
             .catch(err => console.log(err))
     }, [])
+
+    //Get Products by title
+    const [searchByTitle, setSearchByTitle] = useState(null);
+    console.log(searchByTitle)
     
 
     return (
@@ -64,6 +68,8 @@ export const ShoppingCartProvider = ({children}) => {
                 setOrder,
                 items,
                 setItems,
+                searchByTitle,
+                setSearchByTitle,
             }}>
             {children}
         </ShoppingCartContext.Provider>
