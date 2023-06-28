@@ -53,6 +53,7 @@ const CheckoutSideMenu = () => {
               imageUrl={product.images}
               price={product.price}
               handleDelete={ handleDelete }
+              totalPrice={ totalPrice }
             />
           ))
         }
