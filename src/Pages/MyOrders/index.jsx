@@ -14,8 +14,8 @@ function MyOrders() {
   return (
     <>
       <Layout>
-        <div className="flex w-80 items-center justify-center relative ">
-          <h1>MyOrders</h1>
+        <div className="flex w-80 items-center justify-center relative mb-4 ">
+          <h1 className="font-medium text-xl">MyOrders</h1>
         </div>
         {
           context.order.map((order, index) => (
