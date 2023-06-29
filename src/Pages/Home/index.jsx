@@ -10,14 +10,6 @@ function Home() {
   const context = useContext(ShoppingCartContext)
 
   const renderView = () => {
-
-    
-    if (context.filteredItems?.length === 0) {
-      return (
-        context.items?.map(item => (
-          <Card key={item.id} data={item}  />
-        )))
-    }
     
       if (context.filteredItems?.length > 0) {
         return (
@@ -27,13 +19,14 @@ function Home() {
       }
       if (context.filteredItems?.length === 0) {
         return (
-          <p className=' flex justify-center items-center  text-center text-xl'>Por el Momento no contamos con productos en esta categoria</p>
+          <p className=' flex justify-center items-center  text-center text-xl'>No results found</p>
         )
         } else {
-        return (
-          <p className='text-center text-xl'>No results found</p>
-        )
-      }
+          return (
+            context.items?.map(item => (
+            <Card key={item.id} data={item}  />
+            )))
+      } 
   }
   
 
